@@ -346,7 +346,7 @@ button:hover() {
 
 }
 .button--white:hover{
-    background-color:#FFF;
+    background-color:#FFF;;
 }
 .button--flex {
     display: inline-flex;
