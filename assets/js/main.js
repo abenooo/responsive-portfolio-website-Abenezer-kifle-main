@@ -82,7 +82,7 @@ modalBtns.forEach((modalBtn, i) => {
     })
 })
 modalCloses.forEach((modalClose) => {
-    modalClose.addEventListener('click', () =>{
+    modalClose.addEventListener('click', () => {
         modalViews.forEach((modalView) => {
             modalView.classList.remove('active-modal')
         })
@@ -124,7 +124,25 @@ let swiperPortfolio = new Swiper('.swiper-container', {
 // });
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll('section[id]')
 
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+        }else{
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 
 
