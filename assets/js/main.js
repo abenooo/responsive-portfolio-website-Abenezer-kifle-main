@@ -90,38 +90,53 @@ modalCloses.forEach((modalClose) => {
 })
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-
-let swiperPortfolio = new Swiper('.swiper-container', {
+var swiperPortfolio = new Swiper('.portfolio__container', {
     cssMode: true,
     loop: true,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     pagination: {
-        el: '.swiper-pagination',
-        clickable: true
+      el: '.swiper-pagination',
+      clickable: true,
     },
-    mousewheel: true,
-    keyboard: true,
-});
-/*==================== TESTIMONIAL ====================*/
-
-// let swiperTestimonial = new Swiper('.testimonial__container', {
+  });
+// let swiperPortfolio = new Swiper('.swiper-container', {
+//     cssMode: true,
 //     loop: true,
-//     grabCursor:true,
-//    spaceBetween: 48,
-//        pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//         dynamicBullets: true,
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
 //     },
-//     breakpoints:{
-//         568:{
-//             slidesPerView:2
-//         }
-//     }
+//     pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true
+//     },
+//     mousewheel: true,
+//     keyboard: true,
 // });
+/*==================== TESTIMONIAL ====================*/
+var swiperTestimonial = new Swiper('.testimonial__container', {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 48,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+    breakpoints:{
+        568:{
+            slidesPerView: 2,
+        }
+    }
+  });
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
